@@ -14,7 +14,7 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 // Serve HTML files from 'views' directory
 app.use(express.static(path.join(__dirname, 'views')));
 
-app.get('/landingpage', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'landingpage.html'));
 });
 app.get('/home', (req, res) => {
